@@ -1,0 +1,33 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+    <section class="container">
+
+        <div class="page-content">
+
+            <!-- Main Widget Zone -->
+            {{widget('image', 'image', {
+                'src': asset("/images/feature.jpg"),
+                'align': 'widget-align-center',
+            })|raw}}
+
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+
+            {{widget('profile', 'strapline', { 'profileType':'strapline', 'strapline':'profile'})|raw}}
+
+            {{widget('profile', 'companydescription', { 'profileType':'companydescription', 'companydescription':'profile'})|raw}}
+
+            {{widget('button', 'docsbutton', {
+                'text': 'Lorem Ipsum',
+                'align': 'widget-align-center',
+                'action': 'external',
+                'target': '_blank'
+            })|raw}}
+
+            {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+
+        </div>
+
+    </section>
+
+{% endblock %}

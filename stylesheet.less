@@ -1,0 +1,395 @@
+// -----------------------------
+// Stylesheet
+// -----------------------------
+
+// -----------------------------
+// LESS Includes
+// -----------------------------
+
+@import "@{templateCommon}/bk-less-framework-v8.less"; // BaseKit LESS Framework
+
+
+
+
+// -----------------------------
+// Mixins
+// -----------------------------
+
+.border-radius (@radius: 50px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.transition (@prop: all, @time: 0.5s, @ease: ease) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition:    @prop @time @ease;
+    -ms-transition:     @prop @time @ease;
+    -o-transition:      @prop @time @ease;
+    transition:         @prop @time @ease;
+}
+
+
+
+
+// -----------------------------
+// Body Background 
+// -----------------------------
+
+body {
+    min-height: 100vh;
+    .flex-display;
+    .flex-wrap(nowrap);
+    .justify-content(center);
+    .align-items(center);
+    .align-content(center);
+
+    background: @color__body--background;
+}
+
+html body {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/@color__body--background+0,d1ddef+100 */
+    background: @color__body--background; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  @color__body--background 0%, @color__secondary 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  @color__body--background 0%,@color__secondary 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(-45deg,  @color__body--background 0%,@color__secondary 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color__body--background', endColorstr='@color__secondary',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+
+
+// -----------------------------
+// Page Container
+// -----------------------------
+
+.container {
+
+    .flex-display;
+    .flex-wrap(nowrap);
+    .justify-content(center);
+    .align-items(center);
+    .align-content(center);
+
+    width: 94%;
+    max-width: 850px;
+    margin: 20px 3%;
+    text-align: center;
+    background-color: @color__container--background;
+    -webkit-box-shadow: 0px 0px 130px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 130px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 130px 0px rgba(0,0,0,0.3);
+}
+
+.page-content {
+    width: 90%;
+    max-width: 650px;
+    margin: 40px auto 10px;
+}
+
+
+
+
+// -----------------------------
+// Widgets
+// -----------------------------
+
+
+
+
+// Comapanyname
+// -----------------------------
+
+.companyname {
+    padding: 15px 0;
+}
+
+.company-link {
+    @media @tablet {
+        font-size: bkscale(@font__companyname--font-size,0.9);
+        line-height: bkscale(@font__companyname--line-height,0.9);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__companyname--font-size,0.7);
+        line-height: bkscale(@font__companyname--line-height,0.7);
+    }
+}
+
+.company-link:hover {
+    color: @color__link--text;
+    text-decoration: none;
+}
+
+
+
+
+// Image Widget
+// -----------------------------
+
+.imagewidget {
+    .image-title {
+        font-family: @font__h2--font-family;
+        font-size: @font__h2--font-size;
+        line-height: @font__h2--line-height;
+        color: @color__image-title--text;
+    }
+    .image-description {
+        font-size: @font__p--font-size;
+        line-height: @font__p--line-height;
+        color: @color__image-description--text;
+    }
+}
+
+
+
+
+// Profile Widgets
+// -----------------------------
+
+.profile {
+    margin: 0 0 10px;
+    p, a {
+        font-family: @font__p--font-family;
+        font-size: @font__p--font-size;
+        line-height: @font__p--line-height;
+        padding-bottom: 0;
+    }
+    h1, h2, h3, h4, p {
+        color: @color__p--text;
+    }
+    input {
+        color: lighten(@color__p--text, 10%);
+        font-size: bkscale(@font__p--font-size,0.8);
+        line-height: bkscale(@font__p--line-height,0.8);
+    }
+    .address p {
+        padding-bottom: 0;
+    }
+    
+}
+
+
+// Profile Widget: Map Widget
+.map {
+    border: 1px solid darken(@color__body--background, 8%);
+}
+
+
+
+
+// Social Icons
+// -----------------------------
+
+.socialicons {
+    padding-top: 5px;
+}
+
+.social-item {
+    width: 35px;
+    height: 35px;
+    margin-right: 3px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: @color__socialicons--icon--background;
+    border: 1px solid @color-swatch6;
+    .border-radius(50px);
+    &:hover {
+        border: 1px solid @color-swatch3;
+    }
+}
+
+.social-link {
+    display: inline-block;
+    padding: 4px 8px 6px;
+    color: @color__socialicons--icon;
+    &:before {
+        margin-right: 0;
+        font-size: 14px;
+        color: @color__socialicons--icon;
+    }
+    &:hover {
+        text-decoration: none;
+        &:before {
+            color:@color__primary;
+        }
+    }
+}
+.social-name {
+    display: none;
+}
+
+
+
+// Twitter
+// -----------------------------
+
+.tweet-item {
+    .avatar,
+    .tweet-wrap {
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .avatar-image {
+        margin-bottom: 10px;
+        .border-radius(100px);
+    }
+    .tweet-wrap {
+        max-width: 80%;
+    }
+    p {
+        padding-bottom: 0;
+        color: @color__twitter-tweet--text;
+    }
+    .account-link, a {
+        color: @color__twitter-account-name--text;
+    }
+    .account-link {
+        font-family: @font-swatch5-font-family;
+        font-size: @font-swatch5-font-size;
+        font-weight: @font-swatch5-font-weight;
+        line-height: @font-swatch5-line-height;
+    }
+    .tweet-metadata {
+        display: inline-block;
+        margin-top: 5px;
+        font-size: 90%;
+        .timestamp, .via {
+            color: lighten(@color__twitter-tweet--text, 10%);
+        }
+        .timestamp, .via, a {
+            font-size: bkscale(@font-swatch5-font-size,0.8);
+            line-height: bkscale(@font-swatch5-line-height,0.8);
+        }
+    }
+    .timestamp {
+        margin-right: 5px;
+    }
+}
+
+
+
+
+// -----------------------------
+// Buttons
+// -----------------------------
+
+button,
+.button {
+    min-height: 44px;
+    padding: 9px 15px;
+    outline: none;
+    .border-radius(3px);
+    .transition( all, 0.5s, ease );
+    cursor: pointer;
+
+    background: lighten(@color__button--background, 10%); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(lighten(@color__button--background, 10%), @color__button--background); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(lighten(@color__button--background, 10%), @color__button--background); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(lighten(@color__button--background, 10%), @color__button--background); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(lighten(@color__button--background, 10%), @color__button--background); /* Standard syntax */
+    
+    &:hover {
+        background: @color__button--background; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(@color__button--background, darken(@color__button--background, 5%)); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(@color__button--background, darken(@color__button--background, 5%)); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(@color__button--background, darken(@color__button--background, 5%)); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(@color__button--background, darken(@color__button--background, 5%)); /* Standard syntax */
+    }
+}
+
+.buttonwidget {
+    margin: 30px 0;
+}
+
+
+
+
+// -----------------------------
+// Form
+// -----------------------------
+
+// Signup Form
+// -----------------------------
+
+form,
+.form {
+    margin-bottom: 1em;
+    .border-radius(0px);
+}
+
+// Style for tablet and desktop
+@media only screen and (min-width : 480px) {
+    .signupform__form-body {
+        .flex-display;
+        .flex-wrap(nowrap);
+        .justify-content(space-between);
+        .align-items(flex-end);
+        .align-content(stretch);
+    }
+    .signupform__form-group:first-child {
+        -ms-flex: 0 11 100%;
+        -webkit-flex: 0 11 100%;
+        flex: 0 11 100%;
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+}
+
+// Style for mobile
+@media @mobile {
+    .signupform {
+        .form-group:first-child {
+            margin-bottom: 10px;
+        }
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Input
+input[type="email"],
+.input--single-line {
+    min-height: 44px;
+    padding: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    .border-radius(0px);
+    border-bottom: 1px solid darken(@color__body--background, 20%);
+    &:focus {
+        padding: 0 10px;
+        border-color: @color-swatch3;
+        .transition( all, 0.5s, ease );
+    }
+    @media @mobile {
+        text-align: center;
+    }
+}
+
+.signupform {
+    .legend {
+        display: none;
+    }
+    .label {
+        padding: 0 0 20px;
+        font-family: @font__h3--font-family;
+        font-size: @font__h3--font-size;
+        line-height: @font__h3--line-height;
+        color: @color__form-legend--text;
+        font-weight: @font__h3--font-weight;
+        @media only screen and (min-width: 481px) {
+            float: left;
+        }
+    }
+    .button {
+        .border-radius (0 3px 3px 0);
+        @media @mobile {
+            .border-radius (3px);
+        }
+    }
+}
