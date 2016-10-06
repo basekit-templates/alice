@@ -38,7 +38,7 @@
             "letter-spacing": "0px"
         },
         "font3": {
-            "font-family": "\"Merriweather\", Georgia, serif",
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "26px",
@@ -172,8 +172,7 @@
             "font__button--letter-spacing" : "@font-swatch7-letter-spacing"
         },
         "forms": {
-            "color__form-legend--text": "@color__h2--text",
-            "color__form-label--text": "darken(@color__body--background, 30%)"
+            "color__form-label--text": "@color__h3--text"
         },
         "image": {
             "color__image-title--text": "@color__h3--text",
