@@ -13,11 +13,11 @@
 
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
 
-            {{widget('content', 'strapline-content', {
+            {{widget('content', 'strapline', {
               content: '<h2>Lorem ipsum dolor sit amet</h2>'
             })|raw}}
 
-            {{widget('content', 'companydescription-content', {
+            {{widget('content', 'companydescription', {
               content: '<p>Lorem ipsum dolor sit amet...</p>'
             })|raw}}
 
@@ -30,6 +30,11 @@
 
             {{widget('profile', 'socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
 
+        </div>
+
+        <!-- Zone -->
+        <div class="zone-content">
+            {{zone('main')|raw}}
         </div>
 
     </section>
