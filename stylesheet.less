@@ -203,11 +203,11 @@ html body {
     margin-right: 3px;
     margin-bottom: 20px;
     text-align: center;
-    background-color: @color__socialicons--icon--background;
-    border: 1px solid @color-swatch6;
+    background-color: transparent;
+    border: 1px solid @color__socialicons--icon;
     .border-radius(50px);
     &:hover {
-        border: 1px solid @color-swatch3;
+        border: 1px solid @color__socialicons--icon--hover;
     }
 }
 
@@ -223,7 +223,7 @@ html body {
     &:hover {
         text-decoration: none;
         &:before {
-            color:@color__primary;
+            color:@color__socialicons--icon--hover;
         }
     }
 }
