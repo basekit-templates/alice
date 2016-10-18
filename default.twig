@@ -17,9 +17,11 @@
               content: '<h2>LOREM IPSUM DOLOR</h2>'
             })|raw}}
 
-            {{widget('content', 'companydescription', {
-              content: '<p>Lorem ipsum dolor sit amet...</p>'
-            })|raw}}
+            <div class="companydescription">
+                {{widget('content', 'companydescription', {
+                  content: '<p>Lorem ipsum dolor sit amet...</p>'
+                })|raw}}
+            </div>
 
             {{widget('button', 'button', {
                 'text': 'Lorem Ipsum',
