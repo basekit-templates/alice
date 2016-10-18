@@ -111,7 +111,7 @@ html body {
 // -----------------------------
 
 .companyname {
-    padding: 15px 0 30px;
+    padding: 15px 0 5px;
     @media @mobile {
         padding: 15px 0;
     }
@@ -131,6 +131,16 @@ html body {
 .company-link:hover {
     color: @color__link--text;
     text-decoration: none;
+}
+
+
+
+
+// Content Widget
+// -----------------------------
+
+.widget__content {
+   margin-top: 20px; 
 }
 
 
@@ -177,6 +187,15 @@ html body {
     }
     .address p {
         padding-bottom: 0;
+        @media only screen and (min-width: 550px) {
+            display: inline-block;
+            &:after {
+                content: "\002C";
+            }
+            &:last-child:after {
+                content: "";
+            }
+        }
     }
     
 }
