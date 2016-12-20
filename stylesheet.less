@@ -47,17 +47,15 @@ body {
     .justify-content(center);
     .align-items(center);
     .align-content(center);
-
-    background: @color__body--background;
 }
 
 html body {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/@color__body--background+0,d1ddef+100 */
-    background: @color__body--background; /* Old browsers */
-    background: -moz-linear-gradient(-45deg,  @color__body--background 0%, @color__secondary 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg,  @color__body--background 0%,@color__secondary 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(-45deg,  @color__body--background 0%,@color__secondary 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color__body--background', endColorstr='@color__secondary',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/@color-swatch1+0,d1ddef+100 */
+    background: #d1ddef; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #d1ddef 0%, #e9e6e7 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #d1ddef 0%,#e9e6e7 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(-45deg,  #d1ddef 0%,#e9e6e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1ddef', endColorstr='#e9e6e7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 
@@ -206,7 +204,7 @@ html body {
 
 // Profile Widget: Map Widget
 .map {
-    border: 1px solid darken(@color__body--background, 8%);
+    border: 1px solid darken(@color-swatch1, 8%);
 }
 
 
@@ -398,7 +396,7 @@ input[type="email"],
     border-right: none;
     border-left: none;
     .border-radius(0px);
-    border-bottom: 1px solid darken(@color__body--background, 20%);
+    border-bottom: 1px solid darken(@color-swatch1, 20%);
     &:focus {
         padding: 0 10px;
         border-color: @color-swatch3;
