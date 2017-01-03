@@ -13,17 +13,11 @@
 
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
 
-            {{widget('content', 'strapline', {
-              content: '<h2>LOREM IPSUM DOLOR</h2>'
-            })|raw}}
+            {{widget('profile', 'strapline', { 'profileType':'strapline', 'strapline':'profile'})|raw}}
 
-            <div class="companydescription">
-                {{widget('content', 'companydescription', {
-                  content: '<p>Lorem ipsum dolor sit amet...</p>'
-                })|raw}}
-            </div>
+            {{widget('profile', 'companydescription', { 'profileType':'companydescription', 'companydescription':'profile'})|raw}}
 
-            {{widget('button', 'button', {
+            {{widget('button', 'bioButton', {
                 'text': 'Lorem Ipsum',
                 'align': 'widget-align-center',
                 'action': 'external',
