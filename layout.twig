@@ -1,8 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="{{ page.seoLang }}">
 
-<body class="{{ page.backgroundClass }}">
-
     <head>
         <meta charset="utf-8" />
 		<title>{{ page.title }}</title>
@@ -16,6 +14,8 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         {% include basekit.headScript %}
     </head>
+
+    <body class="{{ page.backgroundClass }}">
 
         <!-- Main Widget Zone -->
         {% block content %}
